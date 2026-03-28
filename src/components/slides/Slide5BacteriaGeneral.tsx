@@ -56,7 +56,7 @@ export default function Slide5BacteriaGeneral() {
             Nhân vật chính của <strong className="text-cyan-200 font-semibold text-[1.6rem]">Kỷ nguyên Ướt</strong>. Sau khi nấm mốc tàn lụi nhường chỗ cho bể nước muối, hệ khuẩn này trỗi dậy như dòng hải lưu sâu thẳm. 
             <br/><br/>
             Chúng chuyển hóa hương vị thành kiệt tác Este ngào ngạt và thiết lập  
-            <span className="text-cyan-300 font-bold mx-2 px-4 py-2 bg-cyan-900/40 rounded border border-cyan-800">&quot;Lá Trắn Ph tự nhiên&quot;</span> 
+            <span className="text-cyan-300 font-bold mx-2 px-4 py-2 bg-cyan-900/40 rounded border border-cyan-800 whitespace-nowrap">&quot;Lá Chắn pH tự nhiên&quot;</span> 
             giúp chum tương trường tồn cùng thời gian.
           </p>
         </motion.div>

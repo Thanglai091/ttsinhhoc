@@ -49,7 +49,7 @@ export default function Slide3MoldGeneral() {
         <motion.div variants={popFade} className="bg-gradient-to-br from-fuchsia-950/80 to-indigo-950/70 backdrop-blur-2xl p-12 rounded-[50px] border border-fuchsia-400/50 shadow-[0_30px_60px_-15px_rgba(200,100,250,0.5)]">
           <p className="text-[1.3rem] text-indigo-50/90 leading-[1.8] font-light">
             Sứ giả quyền lực khoác lên mình sinh quyển trắng mịn màng, dân gian kính trọng gọi là 
-            <span className="text-fuchsia-300 font-bold mx-3 px-4 py-2 bg-indigo-900/60 rounded-xl shadow-inner border border-indigo-500/50">&quot;Mốc Tương&quot;</span>.
+            <span className="text-fuchsia-300 font-bold mx-3 px-4 py-2 bg-indigo-900/60 rounded-xl shadow-inner border border-indigo-500/50 whitespace-nowrap">&quot;Mốc Tương&quot;</span>.
             <br/><br/>
             Cấy vào môi trường xôi nếp với nhiệt độ chuẩn xác, hệ sợi tơ của nó vươn dài chọc thủng những lớp rào cản từ thực vật, <strong className="font-semibold text-purple-200">đồng hóa phân thân rực rỡ</strong> như một mạng lưới ngân hà thu nhỏ, đánh vỡ nền tảng vững chắc của vạn vật.
           </p>
