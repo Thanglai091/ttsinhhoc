@@ -1,21 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Organic Animations — GPU-Composited Only */
+  --animate-float: float 14s ease-in-out infinite;
+  --animate-float-delayed: float 18s ease-in-out 4s infinite reverse;
+  --animate-float-fast: float 10s ease-in-out infinite alternate;
+  --animate-blob: blob 12s infinite alternate;
+  --animate-pulse-slow: pulse-slow 5s ease-in-out infinite;
+
+  /* translate3d only — stays on compositor thread, zero repaint */
+  @keyframes float {
+    0%   { transform: translate3d(0, 0, 0); }
+    33%  { transform: translate3d(30px, -40px, 0); }
+    66%  { transform: translate3d(-20px, 20px, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+
+  /* opacity + scale via scale3d — compositor-only, no filter triggers */
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.8; transform: scale3d(1, 1, 1); }
+    50%       { opacity: 1;   transform: scale3d(1.08, 1.08, 1); }
+  }
+
+  /* border-radius morph only — cheap */
+  @keyframes blob {
+    0%   { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    34%  { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+    67%  { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+    100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
   }
 }
 
@@ -23,4 +44,15 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Promote animated elements to their own GPU layer */
+.animate-float,
+.animate-float-delayed,
+.animate-float-fast,
+.animate-blob,
+.animate-pulse-slow {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
