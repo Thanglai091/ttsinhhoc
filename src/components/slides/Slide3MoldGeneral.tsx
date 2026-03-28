@@ -32,12 +32,12 @@ export default function Slide3MoldGeneral() {
         viewport={{ once: true }}
         className="flex flex-col h-full justify-center items-center text-center max-w-5xl mx-auto mt-[-20px] relative z-10"
       >
-        <motion.div variants={popFade} className="relative mb-16">
-          <div className="w-56 h-56 bg-gradient-to-br from-fuchsia-700 to-purple-900 backdrop-blur-3xl border-4 border-fuchsia-400/80 rounded-full flex items-center justify-center shadow-[0_0_120px_rgba(217,70,239,0.8)] animate-pulse-slow">
-            <Sparkles className="w-24 h-24 text-fuchsia-200 drop-shadow-[0_0_30px_#f0abfc]" />
+        <motion.div variants={popFade} className="relative mb-8">
+          <div className="w-36 h-36 bg-gradient-to-br from-fuchsia-700 to-purple-900 backdrop-blur-3xl border-4 border-fuchsia-400/80 rounded-full flex items-center justify-center shadow-[0_0_80px_rgba(217,70,239,0.8)] animate-pulse-slow">
+            <Sparkles className="w-14 h-14 text-fuchsia-200 drop-shadow-[0_0_20px_#f0abfc]" />
           </div>
           {/* Bioluminescent rings */}
-          <div className="absolute -inset-10 border-2 border-fuchsia-400/60 rounded-full animate-[spin_8s_linear_infinite] border-dashed"></div>
+          <div className="absolute -inset-6 border-2 border-fuchsia-400/60 rounded-full animate-[spin_8s_linear_infinite] border-dashed"></div>
         </motion.div>
         
         <motion.div variants={popFade} className="mb-10">
